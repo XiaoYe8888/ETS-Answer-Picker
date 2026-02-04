@@ -1,0 +1,25 @@
+[project]
+name = "ETS-Answer-Picker"
+version = "1.0"
+description = "一个使用python flet开发的E听说答案提取软件"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "XiaoYe", email = "yiewei123@163.com" }
+]
+dependencies = [
+  "flet>=0.80.1"
+]
+
+[dependency-groups]
+dev = [
+  "flet[all]>=0.80.1",
+]
+
+[tool.flet]
+product = "e"
+company = "Flet"
+copyright = "Copyright (C) 2026 by Flet"
+
+[tool.flet.app]
+path = "src"
