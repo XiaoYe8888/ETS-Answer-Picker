@@ -1,6 +1,6 @@
 [project]
 name = "ETS-Answer-Picker"
-version = "1.0"
+version = "1.0.0"
 description = "一个使用python flet开发的E听说答案提取软件"
 readme = "README.md"
 requires-python = ">=3.10"
