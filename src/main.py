@@ -9,6 +9,7 @@ import os
 import shutil
 import eaa
 
+#TODO:修改窗口标题
 def main(page):
     #窗口居中
     page.window.left = (page.window.width-600)/2
@@ -47,7 +48,7 @@ def main(page):
         for i in range(len(dirs)):#遍历 所有题目文件夹
             files=os.listdir(dir+r"\\"+dirs[i])#题目里的文件列表
             if "content2.json" in files:#判断是否有content2
-                content2=open(dir+r"\\"+dirs[i]+r"\\"+"content2.json","r")#打开content2.json
+                content2=open(dir+r"\\"+dirs[i]+r"\\"+"content2.json","r",encoding="utf-8")#打开content2.json
                 answer=eaa.eaa(content2.read())#提取答案
 
                 if isinstance(answer,tuple):#答案是元组
