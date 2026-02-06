@@ -7,9 +7,12 @@
 
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-767676.svg?logo=creativecommons) ![Python](https://img.shields.io/badge/Python-3.8+-3776ab.svg?logo=python) ![Flet](https://img.shields.io/badge/Flet-0.80+-ff005f.svg?logo=https%3A%2F%2Fflet.dev%2Fimg%2Flogo.svg)
 
+**如果本工具对你有帮助，可以给我点一个⭐Star吗，非常感谢🙏**
+
 ## ✨ 作者
 
 By:**小叶**
+
 ![抖音](https://img.shields.io/badge/抖音-小叶搞摄影-000000.svg?logo=tiktok&link=https://www.douyin.com/user/MS4wLjABAAAAIKRSE3HR19AJYvgZ4eCHPO3clYY9HYE-5apqa5n-A8ggoSeLgQ9QNntD0PRSFp_g)
 ![Bilibili](https://img.shields.io/badge/Bilibili-小叶搞摄影-00a1d6.svg?logo=bilibili&link=https://space.bilibili.com/2050229996)
 
