@@ -9,8 +9,9 @@ import os
 import shutil
 import eaa
 
-#TODO:修改窗口标题
+
 def main(page):
+    page.title = ("E听说答案提取器")
     #窗口居中
     page.window.left = (page.window.width-600)/2
     page.window.top = (page.window.height-450)/2
