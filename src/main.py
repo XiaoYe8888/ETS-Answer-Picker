@@ -45,6 +45,7 @@ def main(page):
         dirs=os.listdir(dir)#所有文件夹的列表
         result={}#结果字典
         zsaw=""#转述答案
+        repeat=0#重复
 
         for i in range(len(dirs)):#遍历 所有题目文件夹
             files=os.listdir(dir+r"\\"+dirs[i])#题目里的文件列表
@@ -56,12 +57,33 @@ def main(page):
                     th=answer[0]#题号列表为元组的第1项
                     aw=answer[1]#答案列表
                     for i in range(len(th)):
-                        result[th[i]]=aw[i]#把题号和答案添加到结果字典
+                        if th[i] not in result:#题号没有重复
+                            result[th[i]]=aw[i]#把题号和答案添加到结果字典
+                        else:#题号重复
+                            result[str("2."+th[i])]=aw[i]
+                            repeat=1
                 if isinstance(answer,str):#答案是字符串(只有听后转述的返回值是字符串)
                     zsaw=answer#转述答案
                 content2.close()#关闭文件
+        if repeat==0:#没有重复
+            result=dict(sorted(result.items(),key=lambda x: int(x[0])))#结果字典 排序
+        if repeat==1:#重复了
+            key1=[]
+            key2=[]
+            copy_result=result
+            for key in copy_result.keys():
+                if "." not in key:#有小数点
+                    key1.append(key)
+                else:
+                    key2.append(key)
+            sorted_key1=sorted(key1, key=lambda x: int(x))#转为int排序
+            sorted_key2=sorted(key2, key=lambda x: float(x))#转为float排序
+            for key in sorted_key1:#按顺序添加进最终的结果字典
+                result[key]=copy_result[key]
+            for key in sorted_key2:
+                result[key]=copy_result[key]
 
-        result=dict(sorted(result.items(),key=lambda x: int(x[0])))#结果字典 排序
+
         count=1
         answer_text.value = ""#先清空答案显示区
 
