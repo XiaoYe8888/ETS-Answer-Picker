@@ -36,11 +36,11 @@ def eaa(content):
             b = 0
             aw = ''
             th=''
-            # 提取答案内容（直到遇到句号或引号）
+            # 提取答案内容
             while a+b<len(content):
                 if flag==1:
                     break
-                if content[a + b] != '"' and content[a + b] != '<':
+                if (content[a + b] != '"' or content[a+b-1]=="\\") and content[a + b] != '<':
                     aw+=content[a + b]
                     b+=1
                 else:

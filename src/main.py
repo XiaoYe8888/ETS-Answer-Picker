@@ -1,7 +1,7 @@
 #E听说答案提取器
 #ETS-Answer-Picker
 #By:xiaoye
-#最后修改:2026_2_2
+#最后修改:2026_4_2 V1.2
 
 import flet as ft
 import zipfile
@@ -95,14 +95,15 @@ def main(page):
                 answer_text.value+=i+'.'+result[i]+'  '
             count+=1
 
-        answer_text.value=answer_text.value.replace("\\","")#去掉反斜杠
         zsaw=zsaw.replace(". ",".\n")#转述答案换行
         answer_text.value+='\n'+"听后转述:\n"+zsaw
+        answer_text.value = answer_text.value.replace("\\", "")  # 去掉反斜杠
+        html()
         shutil.rmtree(dir)#删除这个缓存目录和所有缓存文件
     ######答案提取######
 
     def html():
-        if copy_box.value:#已勾选
+        if html_box.value:#已勾选
             answer_text.value=answer_text.value.replace("\n","<br>\n")#换行前加<br>
             answer_text.value = "<p>\n" + answer_text.value + "\n</p>"#开头结尾<p>标签
         else:#取消勾选
@@ -122,7 +123,7 @@ def main(page):
                            "License:CC BY-NC-SA 4.0\n"
                            "协议:知识共享 署名-非商业性使用-相同方式共享 4.0\n"
                            "使用教程请查看仓库里的readme\n"
-                           "By:XiaoYe\nE-mail:yiewei123@163.com\nVersion:1.0")
+                           "By:XiaoYe\nE-mail:yiewei123@163.com\nVersion:1.2\n更新日期：2026/4/2")
 
     page.add(#添加控件到页面
 
@@ -158,7 +159,7 @@ def main(page):
                     padding=5),
                 ft.Column(
                     controls=[
-                        copy_box:=ft.Checkbox(label="HTML格式",on_change=html),#复选框
+                        html_box:=ft.Checkbox(label="HTML格式",on_change=html),#复选框
                         ft.Button("复制",icon=ft.Icons.COPY,on_click=copy)#复制按钮
                     ],
                     alignment=ft.MainAxisAlignment.START,#排到顶部
