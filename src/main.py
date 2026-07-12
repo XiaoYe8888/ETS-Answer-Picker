@@ -91,6 +91,9 @@ def main(page):
             if count%2==0:#为偶数
                 answer_text.value+=i+'.'+result[i]
                 answer_text.value+="\n"#换行
+            elif len(result[i])>25:#字符数量大于25换行
+                answer_text.value+=i+'.'+result[i]
+                answer_text.value+="\n"
             else:
                 answer_text.value+=i+'.'+result[i]+'  '
             count+=1
