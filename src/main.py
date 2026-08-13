@@ -1,7 +1,7 @@
 #E听说答案提取器
 #ETS-Answer-Picker
 #By:xiaoye
-#最后修改:2026_4_2 V1.2
+#最后修改:2026_8_13 V1.3
 
 import flet as ft
 import zipfile
