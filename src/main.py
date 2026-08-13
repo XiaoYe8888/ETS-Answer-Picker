@@ -126,7 +126,7 @@ def main(page):
                            "License:CC BY-NC-SA 4.0\n"
                            "协议:知识共享 署名-非商业性使用-相同方式共享 4.0\n"
                            "使用教程请查看仓库里的readme\n"
-                           "By:XiaoYe\nE-mail:yiewei123@163.com\nVersion:1.2\n更新日期：2026/4/2")
+                           "By:XiaoYe\nE-mail:yiewei123@163.com\nVersion:1.4\n更新日期：2026/8/14")
 
     page.add(#添加控件到页面
 
